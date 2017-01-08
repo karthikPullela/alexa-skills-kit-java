@@ -39,6 +39,8 @@ public class HelloWorldSpeechlet implements Speechlet {
         // any initialization logic goes here
     }
 
+    
+    //This is on launching the app
     @Override
     public SpeechletResponse onLaunch(final LaunchRequest request, final Session session)
             throws SpeechletException {
@@ -47,6 +49,8 @@ public class HelloWorldSpeechlet implements Speechlet {
         return getWelcomeResponse();
     }
 
+    
+    //This is on launching the intent
     @Override
     public SpeechletResponse onIntent(final IntentRequest request, final Session session)
             throws SpeechletException {
@@ -65,6 +69,8 @@ public class HelloWorldSpeechlet implements Speechlet {
         }
     }
 
+    
+    //This is on ending the session, or maybe how to end it
     @Override
     public void onSessionEnded(final SessionEndedRequest request, final Session session)
             throws SpeechletException {
@@ -79,7 +85,7 @@ public class HelloWorldSpeechlet implements Speechlet {
      * @return SpeechletResponse spoken and visual response for the given intent
      */
     private SpeechletResponse getWelcomeResponse() {
-        String speechText = "Welcome to the Alexa Skills Kit, you can say hello";
+        String speechText = "Hey, this is Karthik. Hello.";
 
         // Create the Simple card content.
         SimpleCard card = new SimpleCard();
@@ -94,7 +100,7 @@ public class HelloWorldSpeechlet implements Speechlet {
         Reprompt reprompt = new Reprompt();
         reprompt.setOutputSpeech(speech);
 
-        return SpeechletResponse.newAskResponse(speech, reprompt, card);
+        return SpeechletResponse.newAskResponse(speech, reprompt, card); //Tells the output, then waits for a response.
     }
 
     /**
@@ -103,7 +109,7 @@ public class HelloWorldSpeechlet implements Speechlet {
      * @return SpeechletResponse spoken and visual response for the given intent
      */
     private SpeechletResponse getHelloResponse() {
-        String speechText = "Hello world";
+        String speechText = "Hello world in the intent. Alexa can be very stupid too.";
 
         // Create the Simple card content.
         SimpleCard card = new SimpleCard();
@@ -114,7 +120,7 @@ public class HelloWorldSpeechlet implements Speechlet {
         PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
         speech.setText(speechText);
 
-        return SpeechletResponse.newTellResponse(speech, card);
+        return SpeechletResponse.newTellResponse(speech, card); //Tells the output, but does not wait for a response.
     }
 
     /**

@@ -22,13 +22,13 @@ import com.amazon.speech.speechlet.lambda.SpeechletRequestStreamHandler;
  * your function.
  */
 public final class HelloWorldSpeechletRequestStreamHandler extends SpeechletRequestStreamHandler {
-    private static final Set<String> supportedApplicationIds = new HashSet<String>();
+    private static final Set<String> supportedApplicationIds = new HashSet<String>(); //amzn1.ask.skill.31c2774f-857f-4f6f-b941-d0ed6558bd3b
     static {
         /*
          * This Id can be found on https://developer.amazon.com/edw/home.html#/ "Edit" the relevant
          * Alexa Skill and put the relevant Application Ids in this Set.
          */
-        supportedApplicationIds.add("amzn1.echo-sdk-ams.app.[unique-value-here]");
+        supportedApplicationIds.add("amzn1.ask.skill.31c2774f-857f-4f6f-b941-d0ed6558bd3b");
     }
 
     public HelloWorldSpeechletRequestStreamHandler() {
