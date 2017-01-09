@@ -47,6 +47,8 @@ public class SessionSpeechlet implements Speechlet {
         // any initialization logic goes here
     }
 
+    
+    //This is on launching the app
     @Override
     public SpeechletResponse onLaunch(final LaunchRequest request, final Session session)
             throws SpeechletException {
@@ -55,6 +57,8 @@ public class SessionSpeechlet implements Speechlet {
         return getWelcomeResponse();
     }
 
+    
+    //This is on launching the intent
     @Override
     public SpeechletResponse onIntent(final IntentRequest request, final Session session)
             throws SpeechletException {
@@ -92,8 +96,8 @@ public class SessionSpeechlet implements Speechlet {
     private SpeechletResponse getWelcomeResponse() {
         // Create the welcome message.
         String speechText =
-                "Welcome to the Alexa Skills Kit sample. Please tell me your favorite color by "
-                        + "saying, my favorite color is red";
+                "Yo bros, I am Karthik. Please tell me your favorite color by "
+                        + "saying, my favorite color is red ... Kalyan is an idiot.";
         String repromptText =
                 "Please tell me your favorite color by saying, my favorite color is red";
 
@@ -174,7 +178,7 @@ public class SessionSpeechlet implements Speechlet {
             boolean isAskResponse) {
         // Create the Simple card content.
         SimpleCard card = new SimpleCard();
-        card.setTitle("Session");
+        card.setTitle("Session Sample Program KP");
         card.setContent(speechText);
 
         // Create the plain text output.

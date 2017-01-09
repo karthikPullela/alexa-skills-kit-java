@@ -1,5 +1,6 @@
 MyColorIsIntent  my color is {Color}
 MyColorIsIntent  my favorite color is {Color}
+
 WhatsMyColorIntent whats my color
 WhatsMyColorIntent what is my color
 WhatsMyColorIntent say my color
