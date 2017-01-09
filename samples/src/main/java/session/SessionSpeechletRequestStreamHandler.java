@@ -27,10 +27,10 @@ public class SessionSpeechletRequestStreamHandler extends SpeechletRequestStream
     static {
         /*
          * This Id can be found on https://developer.amazon.com/edw/home.html#/ "Edit" the relevant
-         * Alexa Skill and put the relevant Application Ids in this Set.
+         * Alexa Skill and put the relevant Application Ids in this Set.   amzn1.ask.skill.9c6ada14-1d05-4660-8cf0-80e46bf1574e
          */
         supportedApplicationIds = new HashSet<String>();
-        // supportedApplicationIds.add("amzn1.echo-sdk-ams.app.[unique-value-here]");
+        supportedApplicationIds.add("amzn1.ask.skill.9c6ada14-1d05-4660-8cf0-80e46bf1574e");
     }
 
     public SessionSpeechletRequestStreamHandler() {
