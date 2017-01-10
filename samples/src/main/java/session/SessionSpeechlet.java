@@ -128,6 +128,12 @@ public class SessionSpeechlet implements Speechlet {
             speechText =
                     String.format("I now know that your favorite color is %s. You can ask me your "
                             + "favorite color by saying, what's my favorite color?", favoriteColor);
+            if (session.isNew()) {
+                speechText = speechText + " ... it is a new session here.";
+            } else {
+                speechText = speechText + " ... it is not a new session, multiple requests detected.";
+            }
+            
             repromptText =
                     "You can ask me your favorite color by saying, what's my favorite color?";
 
